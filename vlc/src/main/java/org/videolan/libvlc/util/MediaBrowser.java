@@ -24,7 +24,7 @@ import android.net.Uri;
 
 import java.util.ArrayList;
 
-import org.videolan.BuildConfig;
+//import org.videolan.BuildConfig;
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaDiscoverer;
@@ -33,12 +33,16 @@ import org.videolan.libvlc.MediaList;
 public class MediaBrowser {
     private static final String TAG = "LibVLC/util/MediaBrowser";
 
-    private static final String[] DISCOVERER_LIST = BuildConfig.DEBUG ? new String[]{
+    private static final String[] DISCOVERER_LIST = new String[]{"upnp"};
+
+            /*BuildConfig.DEBUG ? new String[]{
         "dsm", // Netbios discovery via libdsm
         "upnp",
         // "bonjour",
         //  "mdns"
     } : new String[]{"upnp"} ; //Only UPnP for release
+
+             */
 
     private final LibVLC mLibVlc;
     private final ArrayList<MediaDiscoverer> mMediaDiscoverers = new ArrayList<MediaDiscoverer>();

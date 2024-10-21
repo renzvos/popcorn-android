@@ -9,18 +9,18 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath 'com.android.tools.build:gradle:3.5.4'
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
         classpath 'io.sentry:sentry-android-gradle-plugin:1.7.36'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'de.undercouch:gradle-download-task:4.0.4'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
-
+/*
 ext {
     compileSdk = 29
     targetSdk = 29
@@ -36,6 +36,7 @@ ext {
 }
 
 allprojects {
+
     repositories {
         maven { url 'https://guardian.github.com/maven/repo-releases' }
         maven { url 'https://maven.google.com' }
@@ -44,6 +45,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
         google()
     }
+
 
     //let project evaluate its script first
     project.afterEvaluate {
@@ -78,6 +80,8 @@ allprojects {
     }
 }
 
+
+
 def renameOutputFiles(Project project, variant) {
     variant.outputs.each { output ->
         output.versionCodeOverride = project.ext.versionCodes.get(variant.productFlavors[0].name, 0) * 10000000 + output.versionCode
@@ -92,3 +96,6 @@ def renameOutputFiles(Project project, variant) {
         }
     }
 }
+
+
+ */

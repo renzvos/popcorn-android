@@ -1,11 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdk
+    namespace 'org.videolan.libvlc'
+    compileSdkVersion 33
     ndkVersion '22.1.7171670'
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdk
-        targetSdkVersion rootProject.ext.targetSdk
+        minSdkVersion 16
+        targetSdkVersion 33
     }
 
     buildTypes {
@@ -26,5 +27,5 @@ android {
 }
 
 dependencies {
-    implementation "androidx.appcompat:appcompat:$rootProject.ext.appCompatVersion"
+    implementation "androidx.appcompat:appcompat:1.1.0"
 }
